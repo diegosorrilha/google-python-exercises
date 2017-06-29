@@ -25,7 +25,7 @@
 # and donuts(23) returns 'Number of donuts: many'
 def donuts(count):
     if count >= 10:
-        count = 'many'd
+        count = 'many'
     return 'Number of donuts: %s' % count
 
 
