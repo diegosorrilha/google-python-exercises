@@ -24,8 +24,10 @@
 # So donuts(5) returns 'Number of donuts: 5'
 # and donuts(23) returns 'Number of donuts: many'
 def donuts(count):
-    # +++your code here+++
-    return
+    if count >= 10:
+        count = 'many'd
+    return 'Number of donuts: %s' % count
+
 
 
 # B. both_ends
@@ -83,6 +85,10 @@ def main():
     test(donuts(9), 'Number of donuts: 9')
     test(donuts(10), 'Number of donuts: many')
     test(donuts(99), 'Number of donuts: many')
+    test(donuts(1), 'Number of donuts: 1')
+    test(donuts(-1), 'Number of donuts: -1')
+
+
 
     print()
     print('both_ends')
