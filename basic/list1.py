@@ -37,8 +37,15 @@ def match_ends(words):
 # Hint: this can be done by making 2 lists and sorting each of them
 # before combining them.
 def front_x(words):
-    # +++your code here+++
-    return
+    words_x = [i for i in words if i.startswith('x')]
+
+    for i in words_x:
+        words.remove(i)
+
+    words_x.sort()
+    words.sort()
+
+    return words_x + words
 
 
 # C. sort_last
