@@ -32,8 +32,10 @@ def verbing(s):
 # So 'This dinner is not that bad!' yields:
 # This dinner is good!
 def not_bad(s):
-    # +++your code here+++
-    return
+    import re
+
+    r = re.sub('not.*bad','good',s)
+    return r
 
 
 # F. front_back
