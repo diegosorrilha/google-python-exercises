@@ -34,7 +34,7 @@ def verbing(s):
 def not_bad(s):
     import re
 
-    r = re.sub('not.*bad','good',s)
+    r = re.sub('not.*bad', 'good', s)
     return r
 
 
