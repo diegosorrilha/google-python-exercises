@@ -17,8 +17,10 @@
 # If the string length is less than 3, leave it unchanged.
 # Return the resulting string.
 def verbing(s):
-    # +++your code here+++
-    return
+    if len(s) > 2:
+        end = 'ly' if s.endswith('ing') else 'ing'
+        s += end
+    return s
 
 
 # E. not_bad
@@ -63,6 +65,7 @@ def main():
     test(verbing('hail'), 'hailing')
     test(verbing('swiming'), 'swimingly')
     test(verbing('do'), 'do')
+    test(verbing('oi'), 'oi')
 
     print()
     print('not_bad')
