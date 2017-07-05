@@ -46,8 +46,22 @@ def not_bad(s):
 # Given 2 strings, a and b, return a string of the form
 #  a-front + b-front + a-back + b-back
 def front_back(a, b):
-    # +++your code here+++
-    return
+    '''
+    test(front_back('abcd', 'xy'), 'abxcdy')
+    test(front_back('abcde', 'xyz'), 'abcxydez')
+    test(front_back('Kitten', 'Donut'), 'KitDontenut')
+    '''
+
+    def get_halves(s):
+        div, mod = divmod(len(s)+1, 2)
+        t = s[:div], s[div:]
+        return t
+
+    a_front, a_back = get_halves(a)
+    b_front, b_back = get_halves(b)
+
+    return a_front + b_front + a_back + b_back
+
 
 
 # Simple provided test() function used in main() to print
